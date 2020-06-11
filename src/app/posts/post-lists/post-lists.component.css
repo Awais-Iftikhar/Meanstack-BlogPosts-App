@@ -1,0 +1,17 @@
+:host{
+  display: block;
+  margin-top: 1rem ;
+
+}
+
+mat-expansion-panel{
+
+  margin-bottom: 2rem;
+
+}
+/* mat-expansion-panel{
+  margin-bottom: 1rem ;
+
+} */
+
+

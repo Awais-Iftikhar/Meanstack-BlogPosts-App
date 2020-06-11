@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="main">
+  <a mat-button  routerLink="/">MEANSTACKAPP</a>
+  <span class="content"></span>
+  <a mat-button  routerLink="/">Blogs</a>
+
+  <a mat-button routerLink="/create" routerLinkActive="mat-accent" *ngIf="validationlistener">New Post</a>
+  <div *ngIf="!validationlistener">
+    <a mat-button routerLink="/auth/login" routerLinkActive="mat-accent" >Login</a>
+    <a mat-button routerLink="/auth/signup" routerLinkActive="mat-accent">Sign Up</a>
+  </div>
+  <a mat-button  *ngIf="validationlistener" (click)="logoutuser()">Logout</a>
+
+
+
+
+</mat-toolbar>

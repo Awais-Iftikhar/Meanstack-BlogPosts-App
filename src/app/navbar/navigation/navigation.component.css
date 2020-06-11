@@ -1,0 +1,11 @@
+mat-toolbar{
+  padding: 0 100px;
+}
+.content{
+  flex: 1 1 auto;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}

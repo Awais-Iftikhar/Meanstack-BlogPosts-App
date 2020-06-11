@@ -1,0 +1,15 @@
+
+
+
+input[type='file'] {
+  visibility: hidden;
+}
+
+#imginput {
+  visibility: hidden;
+}
+
+.mt {
+  margin-top: 5px;
+}
+

@@ -1,0 +1,6 @@
+{
+  "env" : {
+    "mongodb_pwd" : "ad4J1OqN7mGAQ7cd" ,
+    "jwt_secretkey" : "my_secret_key_mjdmen"
+  }
+}

@@ -1,0 +1,59 @@
+<mat-card  >
+  <mat-spinner *ngIf="isloading"></mat-spinner>
+<form  (ngSubmit)="add(form)" [formGroup] = "form" *ngIf="!isloading">
+  <mat-form-field >
+    <mat-label >Title</mat-label>
+    <input matInput type="text" formControlName = 'title'  >
+    <mat-error *ngIf="this.form.get('title').invalid" >
+      <span *ngIf="this.form.get('title').errors.required">title is required </span>
+      <span *ngIf="this.form.get('title').errors.minlength">must be 3 is required </span>
+
+    </mat-error>
+
+  </mat-form-field>
+  <div>
+    <button mat-stroked-button type="button" (click)="filepicker.click()">Select Image</button>
+    <!-- <input type="text" formControlName = 'image'  value="this.form.get('image')"> -->
+      <div class="mt">
+        <input type="file" #filepicker (change)="postimage($event)">
+    <div class="img-post" *ngIf="imagepreview">
+      <img [src]="imagepreview" [alt]= "form.value.title" >
+    </div>
+      </div>
+  </div>
+
+
+
+  <mat-form-field >
+    <mat-label>Content</mat-label>
+    <textarea  matInput rows="3" cols="4" formControlName = 'content'></textarea>
+    <mat-error *ngIf="this.form.get('content').invalid">
+      <span *ngIf="this.form.get('content').errors.required">content is required </span>
+      <span *ngIf="this.form.get('content').errors.minlength">must be 3 is required </span>
+
+    </mat-error>
+
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" >submit</button>
+</form>
+
+</mat-card>
+
+
+
+
+<!-- <form  (ngSubmit)="add(form)" #form="ngForm" *ngIf="!isloading">
+  <mat-form-field >
+    <mat-label >Title</mat-label>
+    <input matInput type="text" name="mytitle" #title="ngModel" [ngModel] = 'post?.title'  required >
+    <mat-error *ngIf="title.invalid" >title is required</mat-error>
+
+  </mat-form-field>
+  <mat-form-field >
+    <mat-label>Content</mat-label>
+    <textarea  matInput rows="3" cols="4" name = "mycontent" #content="ngModel" [ngModel] = 'post?.content'  required></textarea>
+    <mat-error *ngIf="content.invalid">Content is required</mat-error>
+
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" >submit</button>
+</form> -->
