@@ -1,6 +1,6 @@
 # MEANSTACK BlogPosts App
 
-MEAN Stack blog posts application with Angular on Front-end and Nodejs on backend with complete validation,Auth guards, route protection , user Authentication and authorization using JSON Web Token.
+MEAN Stack blog posts application with Angular on Front-end and Nodejs on backend (REST APIS using MVC architecture) with  route protection , complete validation,Auth guards and user Authentication and authorization using JSON Web Token.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
